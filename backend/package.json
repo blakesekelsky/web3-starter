@@ -5,7 +5,9 @@
     "hardhat": "^2.12.7"
   },
   "scripts": {
-    "deploy": "npx hardhat run scripts/deploy.js --network hardhat",
+    "node": "npx hardhat node",
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat run scripts/deploy.js --network localhost",
     "deploy-goerli": "npx hardhat run scripts/deploy.js --network goerli",
     "verify-goerli": "npx hardhat verify --network goerli $addr > $name.txt"
   },

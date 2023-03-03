@@ -4,7 +4,7 @@ import { ethers } from 'ethers'
 
 import GlobalContext from '@/components/Context/GlobalContext'
 
-// Sample Contract Addresses
+// Smart Contract Addresses
 const SmartContractAddresses = require('@/pages/abis/SmartContracts.json')
 
 // Compiled Contract ABIs
