@@ -6,7 +6,8 @@
   },
   "scripts": {
     "deploy": "npx hardhat run scripts/deploy.js --network hardhat",
-    "deploy-goerli": "npx hardhat run scripts/deploy.js --network goerli"
+    "deploy-goerli": "npx hardhat run scripts/deploy.js --network goerli",
+    "verify-goerli": "npx hardhat verify --network goerli $addr > $name.txt"
   },
   "dependencies": {
     "dotenv": "^16.0.3",

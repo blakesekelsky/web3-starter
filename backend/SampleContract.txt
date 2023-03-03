@@ -1,0 +1,6 @@
+Nothing to compile
+Successfully submitted source code for contract
+contracts/SampleContract.sol:SampleContract at 0xceCad1c0F08C5304D6C42E1d17f3f64f3022954D
+for verification on the block explorer. Waiting for verification result...
+
+
