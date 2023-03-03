@@ -7,13 +7,14 @@ Bootstrapped hardhat project ready to deploy on localhost, goerli testnet, and v
 Run `npm install` and verify hardhat is installed before attempting to run scripts.
 
 ## Usage
-Before attempting to deploy locally, verify a hardhat node is running. 
+Before attempting to deploy locally, verify a hardhat node is running and you have the following environment variables set. 
 
-If you wish to connect to a goerli testnet and verify your contract code, make sure you have an .env in this project's root:
+### **.env:**
+`GOERLI_URL=<url>`
 
-**For deploy to testnet:** GOERLI_URL, PRIV_KEY
+`PRIV_KEY=<key>` 
 
-**For verification on etherscan:** ETHERSCAN_KEY
+`ETHERSCAN_KEY=<api key>`
 
 ## Commands:
 ### Running a local node:
