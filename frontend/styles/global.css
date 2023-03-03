@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+    --bg-theme: rgb(78, 80, 110);
+    --fg-theme: rgb(187, 203, 212);
+    --nav-bg-theme: rgb(0, 33, 44);
+    --nav-fg-theme: rgb(255, 255, 255);
+    --nav-brand-theme: var(--btn-bg-theme);
+    --btn-bg-theme: rgb(19, 241, 93);
+    --btn-fg-theme: var(--nav-bg-theme);
+}
+
+html, body {
+    background-color: var(--bg-theme);
+    margin: 0;
+    padding: 0;
+}

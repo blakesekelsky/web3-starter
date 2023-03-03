@@ -1,0 +1,25 @@
+{
+  "name": "web3-starter",
+  "version": "1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "fullbuild": "next build && next export -o ${npm_package_name}",
+    "ipfs:launch": "ipfs files cp /ipfs/$(ipfs add -r -Q ${npm_package_name}) /${npm_package_name}",
+    "ipfs:link": "echo 'ipfs://'$(ipfs files stat /${npm_package_name} | head -n 1)",
+    "ipfs:unpin": "ipfs pin ls --type recursive | cut -d' ' -f1 | xargs -n1 ipfs pin rm",
+    "ipfs:remove": "ipfs files rm -r /${npm_package_name}",
+    "ipfs:pins": "ipfs pin ls --type recursive"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.3",
+    "ethers": "^5.6.4",
+    "next": "13.2.3",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-dom": "18.2.0",
+    "react-flash-message": "^1.0.8"
+  }
+}

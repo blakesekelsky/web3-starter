@@ -1,0 +1,19 @@
+.connectionMsg {
+    position: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    min-width: 500px;
+    width: 30%;
+    border-radius: 10px;
+    background-color: var(--nav-bg-theme);
+    color: var(--nav-fg-theme);
+    text-align: center;
+}
+
+.msg {
+    margin: auto;
+    padding: 10px;
+    color: var(--fg-theme);
+    font-size: 2em;
+}

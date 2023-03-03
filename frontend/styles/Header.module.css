@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital@1&display=swap');
+
+.navbar {
+    background-color: var(--nav-bg-theme);
+    display: inline-block;
+    min-width: 700px;
+    width: 100%;
+}
+
+.brandLink {
+    color: var(--nav-brand-theme);
+    float: left;
+    padding: 10px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.navbar ul {
+    display: inline-flex;
+    float: left;
+    font-size: 17px;
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    padding: 20px;
+}
+
+.link {
+    color: var(--nav-fg-theme);
+    font-family: 'Fredoka One', cursive;
+    text-decoration: none;
+}
+
+.connectButton { 
+    background-color: var(--btn-bg-theme);
+    color: var(--btn-fg-theme);
+    font-family: 'Zilla Slab', serif;
+    font-size: 19px;
+    width: 180px;
+    height: 35px;
+    border-radius: 8px;
+    float: right;
+    margin: 10px;
+}
