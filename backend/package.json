@@ -1,0 +1,13 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+    "hardhat": "^2.12.7"
+  },
+  "scripts": {
+    "deploy": "npx hardhat run scripts/deploy.js --network hardhat"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.0"
+  }
+}
