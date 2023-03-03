@@ -4,7 +4,7 @@
 
 # ([Frontend Readme](frontend/README.md) | [Backend Readme](backend/README.md))
 
-### **Standalone Local deployment**
+### **Standalone local deployment**
 Verify that you have all of the necessary dependencies for both backend and frontend projects.
 
 #### **web3-starter-backend:**
@@ -16,7 +16,7 @@ Verify that you have all of the necessary dependencies for both backend and fron
 2. Run a dev instance with `npm run dev`
 
 
-### **Standalone IPFS/Goerli + Etherscan Verified deployment**
+### **Standalone IPFS/Goerli + Etherscan verified deployment**
 Verify that you have all of the necessary dependencies for both backend and frontend projects.
 #### **web3-starter-backend:**
 1. Verify that your .env contains GOERLI_URL, PRIV_KEY, and ETHERSCAN_KEY
