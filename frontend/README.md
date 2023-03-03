@@ -12,7 +12,7 @@ Before attempting to deploy on IPFS, verify you have a local node running and th
 
 Before any deploy, verify you have environment variables set.
 
-### **.env.local:**
+### **.env:**
 `NEXT_PUBLIC_CHAIN_ID=<id>`
 
 (goerli testnet example)
