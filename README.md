@@ -1,30 +1,29 @@
-# Web3-Starter
+# **Web3-Starter**
 
 **Bootstrapped hardhat + next.js fullstack project to reduce the time and complexity to developing dApps.**
 
-# Specific Docs([Frontend](frontend/README.md) | [Backend](backend/README.md))
+# ([Frontend Readme](frontend/README.md) | [Backend Readme](backend/README.md))
 
-## Standalone Local deployment
-**Verify that you have all of the necessary dependencies for both backend and frontend projects.**
+### **Standalone Local deployment**
+Verify that you have all of the necessary dependencies for both backend and frontend projects.
 
-### web3-starter/backend:
+#### **web3-starter-backend:**
 1. Run a local hardhat node with `npm run node` .
 2. Deploy the contract with `npm run deploy` .
 
-### web3-starter/frontend:
+#### **web3-starter-frontend:**
 1. Verify that `frontend/pages/abis` now contains a directory `SampleContract.sol/`, and the `SmartContracts.json` file. This is the example contract I've written for the starter code to interact with.
 2. Run a dev instance with `npm run dev`
 
-#
 
-## Standalone IPFS/Goerli + Etherscan Verified deployment
-**Verify that you have all of the necessary dependencies for both backend and frontend projects.**
-### web3-starter/backend:
+### **Standalone IPFS/Goerli + Etherscan Verified deployment**
+Verify that you have all of the necessary dependencies for both backend and frontend projects.
+#### **web3-starter-backend:**
 1. Verify that your .env contains GOERLI_URL, PRIV_KEY, and ETHERSCAN_KEY
 2. Deploy the contract to goerli testnet with `npm run deploy-goerli` .
 3. Verify the contract to etherscan with `addr=<deployed address> name=SampleContract npm run verify-goerli` , there should be a log file created after it processes.
 
-### web3-starter/frontend:
+#### **web3-starter-frontend:**
 1. Verify that `frontend/pages/abis` now contains a directory `SampleContract.sol/`, and the `SmartContracts.json` file. 
 2. Set an environment variable `NEXT_PUBLIC_CHAIN_ID=5` to connect to the goerli testnet.
 3. Build and export the next.js project with `npm run ipfs:launch` .
