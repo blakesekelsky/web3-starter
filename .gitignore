@@ -5,4 +5,4 @@ artifacts/
 .next/
 .vscode/
 build/
-out/
+web3-starter-frontend/
