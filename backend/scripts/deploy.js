@@ -2,9 +2,9 @@ const hre = require("hardhat");
 const fs = require('fs-extra');
 
 // Path to frontend's abis folder
-const addressJSONPath = `${__dirname}/../../frontend/pages/abis/SmartContracts.json`;
-const backendABIPath = `${__dirname}/../artifacts/contracts/`;
-const frontendABIPath = `${__dirname}/../../frontend/pages/abis/`;
+const buildPath = `${__dirname}/../artifacts/contracts/`;
+const frontendABIsPath = `${__dirname}/../../frontend/pages/abis/`;
+const frontendContractAddressesPath = `${__dirname}/../../frontend/pages/abis/SmartContracts.json`;
 
 async function main() {
   // Deploy contracts
@@ -13,22 +13,29 @@ async function main() {
 
   await sampleContract.deployed();
 
-  // Clears out ../../frontend/pages/abis/ directory
-  removeDir(frontendABIPath);
-
-  // Copies ../artifacts/contracts/ -> ../../frontend/pages/abis/
-  copyDir(backendABIPath, frontendABIPath);
-
-  // Add smart contract addresses to JSON file
-  // Saves to -> ../../frontend/pages/abis/SmartContracts.json
-  let smartContractAddressess = {
+  // Build object with deployed contract addresses
+  let deployedContracts = {
     SampleContract: sampleContract.address
   };
-  saveAddress(addressJSONPath, smartContractAddressess);
+
+  // Export build files to frontend 
+  exportBuild(buildPath, frontendABIsPath, frontendContractAddressesPath, deployedContracts);
 
   console.log(
-    `Addresses Imported: ${JSON.stringify(smartContractAddressess)}`
+    `Addresses Imported: ${JSON.stringify(deployedContracts)}`
   );
+}
+
+function exportBuild(buildPath, frontendABIsPath, frontendContractAddressesPath, deployedContracts) { 
+  // Clears out ../../frontend/pages/abis/ directory
+  removeDir(frontendABIsPath);
+
+  // Copies ../artifacts/contracts/ -> ../../frontend/pages/abis/
+  copyDir(buildPath, frontendABIsPath);
+
+  // Add deployed contract addresses to JSON file
+  // Saves to -> ../../frontend/pages/abis/SmartContracts.json
+  saveAddress(frontendContractAddressesPath, deployedContracts);
 }
 
 // Delete directory
